@@ -54,7 +54,7 @@
 
 - Crea una función que reciba una palabra e imprima por consola esa palabra pero con las vocales en mayúscula.(HECHO)
 
-- Crea una función que reciba una frase e imprima el número de veces que se repite cada vocal, por ejemplo para la frase "Enrique ordeña cabras", el resultado por consola debe ser:
+- Crea una función que reciba una frase e imprima el número de veces que se repite cada vocal, por ejemplo para la frase "Enrique ordeña cabras", el resultado por consola debe ser: (HECHO)
   a: 3,
   e: 3,
   i: 1,

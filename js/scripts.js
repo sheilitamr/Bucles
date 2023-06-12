@@ -115,4 +115,86 @@ const vocalsUpperCase = word => {
   console.log(newWord);
 };
 
-vocalsUpperCase('Dorian');
+/* vocalsUpperCase('Dorian'); */
+
+const repeatedVowels = phrase => {
+  const vowels = {
+    a: 0,
+    e: 0,
+    i: 0,
+    o: 0,
+    u: 0
+  };
+
+  for (const letter of phrase) {
+    if (letter === 'a') {
+      vowels.a++;
+    } else if (letter === 'e') {
+      vowels.e++;
+    } else if (letter === 'i') {
+      vowels.i++;
+    } else if (letter === 'o') {
+      vowels.o++;
+    } else if (letter === 'u') {
+      vowels.u++;
+    }
+  }
+  console.log(
+    `a:${vowels.a}`,
+    `e:${vowels.e}, i:${vowels.i}, o:${vowels.o}, u:${vowels.u}`
+  );
+};
+
+/* repeatedVowels('sheila acaricia a nala'); */
+
+const interleaveLetters = (word1, word2) => {
+  let newWord = '';
+  let shortestWord;
+  if (word1.length > word2.length) {
+    shortestWord = word2;
+  } else shortestWord = word1;
+  for (let i = 0; i < shortestWord.length; i++) {
+    newWord += word1[i] + word2[i];
+  }
+  console.log(newWord);
+};
+/* interleaveLetters('hola', 'adios'); */
+
+const reverseWord = word => {
+  let newWord = '';
+  for (let i = word.length - 1; i >= 0; i--) {
+    newWord += word[i];
+  }
+  console.log(newWord);
+};
+
+/* reverseWord('Mariposa'); */
+
+const arrayOddEven = numbers => {
+  const even = [];
+  const odd = [];
+  const randomNumber = Math.floor(Math.random() * 11);
+
+  for (const number of numbers) {
+    const multiply = randomNumber * number;
+    if (multiply % 2 === 0) {
+      even.push(multiply);
+    } else odd.push(multiply);
+  }
+  console.log(`Los números son ${numbers}`);
+  console.log(`Los números pares son ${even}`);
+  console.log(`Los números impares son ${odd}`);
+};
+
+/* arrayOddEven([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]); */
+
+const firstLetterLastLeter = words => {
+  const letters = [];
+  for (let i = 0; i < words.length; i++) {
+    letters.push(words[i].charAt(0).toUpperCase());
+    letters.push(words[i].charAt(words[i].length - 1).toUpperCase());
+  }
+
+  console.log(letters);
+};
+firstLetterLastLeter(['hola', 'adios', 'gato', 'perro', 'casa']);
